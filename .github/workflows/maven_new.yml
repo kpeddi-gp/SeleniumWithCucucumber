@@ -34,7 +34,7 @@ jobs:
     - name: Build with Maven
       continue-on-error: true
       run: mvn clean verify -Dtestng.dtd.http=true
-    - uses: deblockt/cucumber-report-annotations-action@v1.11
+    - uses: deblockt/cucumber-report-annotations-action@v1.10
       with:
         access-token: ${{ secrets.GITHUB_TOKEN }}
         path: "**/cucumber.json"
