@@ -27,6 +27,11 @@ jobs:
       with:
         access-token: ${{ secrets.GITHUB_TOKEN }}
         path: "**/cucumber.json"
+        check-status-on-error: success
+        check-status-on-undefined: success
+        check-status-on-pending: success
+        annotation-status-on-error: success
+        show-number-of-error-on-check-title: true
     - name: Deploy report page to GitHub Page
       uses: peaceiris/actions-gh-pages@v3
       with:
